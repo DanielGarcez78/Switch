@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Compile Remove="Migrations\20190105150135_Init.cs" />
+    <Compile Remove="Migrations\20190109141101_Version_1_0_4.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -43,6 +43,15 @@ namespace Switch.Infra.Data.Config
             builder.Property(u => u.UrlFoto)
                 .HasMaxLength(4000);
 
+            // FK IDENTIFICACAO
+            builder.HasOne(u => u.Identificacao)
+                .WithOne(i => i.Usuario)
+                .HasForeignKey<Identificacao>(i => i.UsuarioId);
+
+            // FK POSTAGENS
+            builder.HasMany(u => u.Postagens)
+                .WithOne(p => p.Usuario);
+
         }
     }
 }

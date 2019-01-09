@@ -1,18 +1,16 @@
-﻿using System;
+﻿using Switch.Domain.Enum;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Switch.Domain.Entities
 {
-    public class Postagem
+    public class Identificacao
     {
         public int Id { get; private set; }
-        public DateTime DataPublicacao { get; set; }
-        public string Texto { get; set; }
+        public TipoDocumentoEnum TipoDocumento { get; set; }
+        public string Numero { get; set; }
         public int UsuarioId { get; set; }
-        public int GrupoId { get; set; }
-
         public virtual Usuario Usuario { get; set; }
-        public virtual Grupo Grupo { get; set; }
     }
 }
