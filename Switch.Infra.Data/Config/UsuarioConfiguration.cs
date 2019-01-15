@@ -36,8 +36,8 @@ namespace Switch.Infra.Data.Config
                 .IsRequired();
 
             // GENERO
-            builder.Property(u => u.Genero)
-                .IsRequired();
+            //builder.Property(u => u.Genero)
+            //    .IsRequired();
 
             // URLFOTO
             builder.Property(u => u.UrlFoto)
@@ -50,7 +50,28 @@ namespace Switch.Infra.Data.Config
 
             // FK POSTAGENS
             builder.HasMany(u => u.Postagens)
-                .WithOne(p => p.Usuario);
+                .WithOne(p => p.Usuario)
+                .HasForeignKey(p => p.UsuarioId);
+
+            // FK COMENTÁRIOS
+            builder.HasMany(u => u.Comentarios)
+                .WithOne(c => c.Usuario)
+                .HasForeignKey(c => c.UsuarioId);
+
+            // FK AMIGOS
+            builder.HasMany(u => u.Amigos)
+                .WithOne(a => a.Usuario)
+                .HasForeignKey(a => a.UsuarioId);
+
+            // FK INSTITUICAO ENSINO
+            builder.HasMany(u => u.InstituicoesEnsino)
+                .WithOne(i => i.Usuario)
+                .HasForeignKey(i => i.UsuarioId);
+
+            // FK LOCAL TRABALHO
+            builder.HasMany(u => u.LocaisTrabalho)
+                .WithOne(l => l.Usuario)
+                .HasForeignKey(l => l.UsuarioId);
 
         }
     }

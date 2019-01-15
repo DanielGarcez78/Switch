@@ -9,6 +9,7 @@ namespace Switch.Domain.Entities
         public int Id { get; private set; }
         public DateTime DataPublicacao { get; set; }
         public string Texto { get; set; }
+        public string UrlConteudo { get; set; }
         public int UsuarioId { get; set; }
         public int GrupoId { get; set; }
 

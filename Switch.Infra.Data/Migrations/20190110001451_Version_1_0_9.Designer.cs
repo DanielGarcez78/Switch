@@ -2,34 +2,22 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Switch.Infra.Data.Context;
 
 namespace Switch.Infra.Data.Migrations
 {
     [DbContext(typeof(SwitchContext))]
-    partial class SwitchContextModelSnapshot : ModelSnapshot
+    [Migration("20190110001451_Version_1_0_9")]
+    partial class Version_1_0_9
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.2.0-rtm-35687")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
-
-            modelBuilder.Entity("Switch.Domain.Entities.Acesso", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Descricao")
-                        .IsRequired()
-                        .HasMaxLength(400);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Acessos");
-                });
 
             modelBuilder.Entity("Switch.Domain.Entities.Amigo", b =>
                 {
@@ -191,33 +179,6 @@ namespace Switch.Infra.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ProcurandoPor");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Descricao = "Não Especificado"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Descricao = "Namoro"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Descricao = "Amizade"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Descricao = "Relacionamento Sério"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Descricao = "Apenas Sexo"
-                        });
                 });
 
             modelBuilder.Entity("Switch.Domain.Entities.StatusRelacionamento", b =>
@@ -232,28 +193,6 @@ namespace Switch.Infra.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("StatusRelacionamento");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Descricao = "Não Especificado"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Descricao = "Solteiro"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Descricao = "Casado"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Descricao = "Em Relacionamento Sério"
-                        });
                 });
 
             modelBuilder.Entity("Switch.Domain.Entities.Usuario", b =>
