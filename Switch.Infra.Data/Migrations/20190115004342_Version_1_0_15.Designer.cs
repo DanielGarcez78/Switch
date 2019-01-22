@@ -2,20 +2,36 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Switch.Infra.Data.Context;
 
 namespace Switch.Infra.Data.Migrations
 {
     [DbContext(typeof(SwitchContext))]
-    partial class SwitchContextModelSnapshot : ModelSnapshot
+    [Migration("20190115004342_Version_1_0_15")]
+    partial class Version_1_0_15
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.2.0-rtm-35687")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
+
+            modelBuilder.Entity("Switch.Domain.Entities.Acesso", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasMaxLength(400);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Acessos");
+                });
 
             modelBuilder.Entity("Switch.Domain.Entities.Amigo", b =>
                 {
@@ -240,6 +256,18 @@ namespace Switch.Infra.Data.Migrations
                             Id = 4,
                             Descricao = "Em Relacionamento Sério"
                         });
+                });
+
+            modelBuilder.Entity("Switch.Domain.Entities.Teste", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Descricao");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Testes");
                 });
 
             modelBuilder.Entity("Switch.Domain.Entities.Usuario", b =>

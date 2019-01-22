@@ -28,7 +28,7 @@ namespace Switch.Infra.Data.Config
             // FK POSTAGENS
             builder.HasMany(g => g.Postagens)
                 .WithOne(p => p.Grupo)
-                .HasForeignKey(p => p.GrupoId);                
+                .HasForeignKey(p => p.GrupoId);
 
         }
     }

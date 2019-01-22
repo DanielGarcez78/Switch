@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Switch.Domain.Entities;
 using Switch.Infra.Data.Config;
+//using Switch.Infra.Data.Config;
 
 namespace Switch.Infra.Data.Context
 {
@@ -30,7 +31,6 @@ namespace Switch.Infra.Data.Context
             modelBuilder.ApplyConfiguration(new LocalTrabalhoConfiguration());
             modelBuilder.ApplyConfiguration(new ProcurandoPorConfiguration());
             modelBuilder.ApplyConfiguration(new StatusRelacionamentoConfiguration());
-            modelBuilder.ApplyConfiguration(new AcessoConfiguration());
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
@@ -44,6 +44,5 @@ namespace Switch.Infra.Data.Context
         public DbSet<LocalTrabalho> LocaisTrabalho { get; set; }
         public DbSet<ProcurandoPor> ProcurandoPor { get; set; }
         public DbSet<StatusRelacionamento> StatusRelacionamento { get; set; }
-        public DbSet<Acesso> Acessos { get; set; }
     }
 }

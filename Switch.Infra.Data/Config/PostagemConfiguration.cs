@@ -20,7 +20,7 @@ namespace Switch.Infra.Data.Config
                 .IsRequired()
                 .HasMaxLength(4000);
 
-            // FK USUARIO
+            //FK USUARIO
             builder.HasOne(p => p.Usuario)
                 .WithMany(u => u.Postagens)
                 .HasForeignKey(p => p.UsuarioId);

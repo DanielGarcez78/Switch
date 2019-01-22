@@ -6,15 +6,47 @@
 
   <ItemGroup>
     <Compile Remove="Migrations\20190105150135_Init.cs" />
+    <Compile Remove="Migrations\20190105150751_Version_1_0_0.cs" />
+    <Compile Remove="Migrations\20190105150751_Version_1_0_0.Designer.cs" />
+    <Compile Remove="Migrations\20190106123030_Version_1_0_1.cs" />
+    <Compile Remove="Migrations\20190106123030_Version_1_0_1.Designer.cs" />
+    <Compile Remove="Migrations\20190106130013_Version_1_0_2.cs" />
+    <Compile Remove="Migrations\20190106130013_Version_1_0_2.Designer.cs" />
+    <Compile Remove="Migrations\20190106130739_Version_1_0_3.cs" />
+    <Compile Remove="Migrations\20190106130739_Version_1_0_3.Designer.cs" />
     <Compile Remove="Migrations\20190109141101_Version_1_0_4.cs" />
+    <Compile Remove="Migrations\20190109211600_Version_1_0_4.cs" />
+    <Compile Remove="Migrations\20190109211600_Version_1_0_4.Designer.cs" />
+    <Compile Remove="Migrations\20190109212731_Version_1_0_5.cs" />
+    <Compile Remove="Migrations\20190109212731_Version_1_0_5.Designer.cs" />
+    <Compile Remove="Migrations\20190109214337_Version_1_0_6.cs" />
+    <Compile Remove="Migrations\20190109214337_Version_1_0_6.Designer.cs" />
+    <Compile Remove="Migrations\20190109221253_Version_1_0_7.cs" />
+    <Compile Remove="Migrations\20190109221253_Version_1_0_7.Designer.cs" />
+    <Compile Remove="Migrations\20190109221711_Version_1_0_8.cs" />
+    <Compile Remove="Migrations\20190109221711_Version_1_0_8.Designer.cs" />
+    <Compile Remove="Migrations\20190110001451_Version_1_0_9.cs" />
+    <Compile Remove="Migrations\20190110001451_Version_1_0_9.Designer.cs" />
+    <Compile Remove="Migrations\20190110002639_Version_1_0_10.cs" />
+    <Compile Remove="Migrations\20190110002639_Version_1_0_10.Designer.cs" />
     <Compile Remove="Migrations\20190114234812_Version_1_0_11.cs" />
     <Compile Remove="Migrations\20190114235029_Version_1_0_12.cs" />
+    <Compile Remove="Migrations\20190115000041_Version_1_0_12.cs" />
+    <Compile Remove="Migrations\20190115000041_Version_1_0_12.Designer.cs" />
     <Compile Remove="Migrations\20190115001817_Version_1_0_13.cs" />
+    <Compile Remove="Migrations\20190115001921_Version_1_0_13.cs" />
+    <Compile Remove="Migrations\20190115001921_Version_1_0_13.Designer.cs" />
+    <Compile Remove="Migrations\20190115002932_Version_1_0_14.cs" />
+    <Compile Remove="Migrations\20190115002932_Version_1_0_14.Designer.cs" />
+    <Compile Remove="Migrations\20190115004342_Version_1_0_15.cs" />
+    <Compile Remove="Migrations\20190115004342_Version_1_0_15.Designer.cs" />
+    <Compile Remove="Migrations\20190115012515_v_1_0_666.cs" />
+    <Compile Remove="Migrations\20190115012515_v_1_0_666.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.2.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.0">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>

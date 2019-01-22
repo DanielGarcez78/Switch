@@ -36,8 +36,8 @@ namespace Switch.Infra.Data.Config
                 .IsRequired();
 
             // GENERO
-            //builder.Property(u => u.Genero)
-            //    .IsRequired();
+            builder.Property(u => u.Genero)
+                .IsRequired();
 
             // URLFOTO
             builder.Property(u => u.UrlFoto)
